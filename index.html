@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Davita Dwirissa — General Dentist</title>
+<meta name="description" content="Dr. Davita Dwirissa, General Dentist Practitioner. Six years of compassionate, evidence-based dental care across Indonesia." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c8a888'/><text x='16' y='22' text-anchor='middle' font-family='Cormorant Garamond,serif' font-weight='500' font-size='18' fill='%232b231b'>D</text></svg>" />
+<style>
+  :root{
+    --cream: #f6ede0;
+    --cream-2: #efe3d0;
+    --nude: #e6d5bf;
+    --tan: #c8a888;
+    --mocha: #5a4632;
+    --ink: #2b231b;
+    --muted: #8a7660;
+    --rule: rgba(43, 35, 27, 0.14);
+    --serif: "Cormorant Garamond", "Times New Roman", serif;
+    --sans: "DM Sans", -apple-system, Segoe UI, system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  html, body{ margin:0; padding:0; background: var(--cream); color: var(--ink); font-family: var(--sans); font-weight: 400; -webkit-font-smoothing: antialiased; }
+  body{ font-size: 16px; line-height: 1.6; }
+  img{ display:block; max-width:100%; }
+  a{ color: var(--ink); text-decoration: none; }
+  ::selection{ background: var(--tan); color: var(--ink); }
+
+  /* ——— Layout ——— */
+  .wrap{ width: min(1240px, 100% - 48px); margin-inline: auto; }
+  .rule{ height:1px; background: var(--rule); width:100%; }
+  .eyebrow{ font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mocha); }
+  .h-display{ font-family: var(--serif); font-weight: 500; letter-spacing: -0.01em; line-height: 1.02; }
+
+  /* ——— Top bar ——— */
+  .topbar{ position: sticky; top: 0; z-index: 50; background: color-mix(in oklab, var(--cream) 88%, transparent); backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px); border-bottom: 1px solid var(--rule); }
+  .topbar .inner{ display:flex; align-items:center; justify-content:space-between; height: 64px; }
+  .brand{ display:flex; align-items: baseline; gap: 10px; font-family: var(--serif); font-size: 22px; font-weight: 500; }
+  .brand .dot{ width: 7px; height: 7px; border-radius: 50%; background: var(--tan); display: inline-block; transform: translateY(-3px); }
+  nav.primary{ display:flex; gap: 28px; }
+  nav.primary a{ font-size: 13.5px; color: var(--mocha); transition: color .2s ease; }
+  nav.primary a:hover{ color: var(--ink); }
+  .topcta{ display:inline-flex; align-items:center; gap:8px; padding: 9px 16px; border-radius: 999px; background: var(--ink); color: var(--cream); font-size: 13px; letter-spacing: 0.01em; transition: transform .15s ease, background .2s ease; }
+  .topcta:hover{ background: var(--mocha); }
+  .topcta svg{ width: 14px; height: 14px; }
+  @media (max-width: 760px){
+    nav.primary{ display:none; }
+  }
+
+  /* ——— Hero ——— */
+  .hero{ padding: 56px 0 88px; position: relative; overflow: hidden; }
+  .hero .grid{ display:grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: end; }
+  .hero .lead .eyebrow{ display:inline-flex; align-items:center; gap:10px; }
+  .hero .lead .eyebrow::before{ content:""; width: 28px; height:1px; background: var(--mocha); display:inline-block; }
+  .hero h1{ margin: 18px 0 18px; font-family: var(--serif); font-weight: 500; font-size: clamp(56px, 9.4vw, 148px); line-height: 0.94; letter-spacing: -0.02em; }
+  .hero h1 .second{ display:block; font-style: italic; color: var(--mocha); letter-spacing: -0.015em; }
+  .hero .summary{ max-width: 520px; font-size: 17px; color: #4a3f33; }
+  .hero .actions{ margin-top: 28px; display:flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary{ display:inline-flex; align-items:center; gap: 10px; background: var(--ink); color: var(--cream); padding: 14px 22px; border-radius: 999px; font-size: 14px; letter-spacing: 0.02em; border: 0; cursor: pointer; transition: transform .15s ease, background .2s ease; font-family: var(--sans); }
+  .btn-primary:hover{ background: var(--mocha); }
+  .btn-primary svg{ width: 16px; height: 16px; }
+  .btn-ghost{ display:inline-flex; align-items:center; gap: 10px; background: transparent; color: var(--ink); padding: 14px 22px; border-radius: 999px; border: 1px solid var(--ink); font-size: 14px; cursor: pointer; font-family: var(--sans); transition: background .2s ease, color .2s ease; }
+  .btn-ghost:hover{ background: var(--ink); color: var(--cream); }
+  .btn-ghost svg{ width: 14px; height: 14px; }
+
+  .hero .portrait{ position: relative; align-self: end; }
+  .hero .portrait .frame{ position: relative; aspect-ratio: 4/5; background: var(--nude); border-radius: 280px 280px 18px 18px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(43,35,27,0.25); }
+  .hero .portrait .frame img{ width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+  .hero .portrait .meta{ position:absolute; left: -10px; bottom: 26px; background: var(--cream); border: 1px solid var(--rule); border-radius: 14px; padding: 12px 16px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mocha); box-shadow: 0 12px 30px -20px rgba(43,35,27,0.4);}
+  .hero .portrait .meta strong{ font-family: var(--serif); font-weight: 500; font-size: 16px; letter-spacing: 0; text-transform: none; color: var(--ink); display:block; margin-top: 2px; }
+
+  .hero .marker{ position:absolute; pointer-events:none; }
+  .hero .marker.tl{ top: 36px; right: 0; font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .hero .marker.tl span{ display:block; }
+
+  /* hero ticker */
+  .ticker{ margin-top: 56px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 18px 0; display:flex; gap: 60px; overflow:hidden; mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); }
+  .ticker .track{ display:flex; gap: 60px; animation: scroll 38s linear infinite; flex-shrink: 0; }
+  .ticker .item{ display:flex; align-items:center; gap: 14px; white-space: nowrap; font-family: var(--serif); font-size: 22px; color: var(--mocha); font-style: italic; }
+  .ticker .item::before{ content:""; width: 6px; height:6px; background: var(--tan); border-radius: 50%; display:inline-block; }
+  @keyframes scroll{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
+
+  @media (max-width: 900px){
+    .hero{ padding: 36px 0 64px; }
+    .hero .grid{ grid-template-columns: 1fr; gap: 36px; }
+    .hero .portrait{ max-width: 360px; margin-inline: auto; }
+    .hero .marker.tl{ display:none; }
+  }
+
+  /* ——— Section header pattern ——— */
+  section.block{ padding: 110px 0; border-top: 1px solid var(--rule); }
+  .secthead{ display:grid; grid-template-columns: 220px 1fr; gap: 48px; margin-bottom: 56px; align-items: start; }
+  .secthead .num{ font-family: var(--mono); font-size: 12px; letter-spacing: 0.18em; color: var(--muted); text-transform: uppercase; }
+  .secthead h2{ margin: 0; font-family: var(--serif); font-weight: 500; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.02; letter-spacing: -0.01em; max-width: 16ch; }
+  .secthead h2 em{ font-style: italic; color: var(--mocha); }
+  @media (max-width: 760px){
+    .secthead{ grid-template-columns: 1fr; gap: 12px; }
+    section.block{ padding: 80px 0; }
+  }
+
+  /* ——— About ——— */
+  .about-grid{ display:grid; grid-template-columns: 220px 1fr 1fr; gap: 48px; align-items: start; }
+  .about-grid .lede{ font-family: var(--serif); font-size: 28px; line-height: 1.25; color: var(--ink); font-weight: 400; }
+  .about-grid .lede em{ font-style: italic; color: var(--mocha); }
+  .about-grid p{ font-size: 15.5px; color: #4a3f33; max-width: 50ch; }
+  .factstack{ display:flex; flex-direction:column; gap: 18px; padding-left: 24px; border-left: 1px solid var(--rule); }
+  .fact .k{ font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .fact .v{ font-family: var(--serif); font-size: 19px; color: var(--ink); }
+  @media (max-width: 1000px){
+    .about-grid{ grid-template-columns: 1fr; }
+    .factstack{ flex-direction:row; flex-wrap:wrap; gap: 28px; border:0; padding:0; border-top: 1px solid var(--rule); padding-top: 28px; }
+  }
+
+  /* ——— Experience ——— */
+  .exp-list{ display:flex; flex-direction:column; }
+  .exp-row{ display:grid; grid-template-columns: 160px 1.2fr 1fr 90px; gap: 32px; align-items: start; padding: 28px 0; border-top: 1px solid var(--rule); transition: background .2s ease, padding .2s ease; }
+  .exp-row:last-child{ border-bottom: 1px solid var(--rule); }
+  .exp-row .yr{ font-family: var(--mono); font-size: 12px; color: var(--mocha); letter-spacing: 0.1em; padding-top: 4px; }
+  .exp-row h3{ margin: 0 0 4px; font-family: var(--serif); font-weight: 500; font-size: 26px; line-height: 1.1; letter-spacing: -0.005em; }
+  .exp-row .loc{ font-size: 13.5px; color: var(--muted); }
+  .exp-row .role{ font-size: 14px; color: var(--mocha); margin-bottom: 8px; }
+  .exp-row ul{ margin: 6px 0 0; padding: 0; list-style: none; font-size: 14.5px; color: #4a3f33; }
+  .exp-row ul li{ padding-left: 16px; position: relative; margin-bottom: 4px; }
+  .exp-row ul li::before{ content:""; position:absolute; left:0; top: 0.7em; width: 6px; height:1px; background: var(--mocha); }
+  .exp-row .idx{ font-family: var(--mono); font-size: 11px; color: var(--muted); text-align: right; padding-top: 6px; letter-spacing: 0.12em; }
+  .exp-row:hover{ background: color-mix(in oklab, var(--cream-2) 50%, transparent); }
+  @media (max-width: 900px){
+    .exp-row{ grid-template-columns: 1fr; gap: 8px; }
+    .exp-row .idx{ display:none; }
+    .exp-row .yr{ order: -1; }
+  }
+
+  /* ——— Credentials grid ——— */
+  .cred-grid{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
+  .card{ background: var(--cream-2); border: 1px solid var(--rule); border-radius: 18px; padding: 26px 26px 28px; position: relative; overflow:hidden; }
+  .card .label{ font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mocha); margin-bottom: 18px; display:flex; justify-content: space-between; align-items:center; }
+  .card .label .glyph{ width: 22px; height: 22px; border-radius: 50%; background: var(--tan); display:inline-flex; align-items:center; justify-content:center; font-family: var(--serif); color: var(--ink); font-size: 12px; }
+  .card h3{ margin: 0; font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.15; }
+  .card .body{ margin-top: 14px; font-size: 14.5px; color: #4a3f33; }
+  .card ul{ margin: 0; padding: 0; list-style:none; display:flex; flex-direction:column; gap: 10px; }
+  .card ul li{ font-size: 14.5px; color: #3e342a; padding-bottom: 10px; border-bottom: 1px dashed var(--rule); }
+  .card ul li:last-child{ border-bottom: 0; padding-bottom: 0; }
+  .card ul li .yr{ font-family: var(--mono); font-size: 11px; color: var(--muted); display:block; margin-top: 2px; letter-spacing: 0.1em; }
+  @media (max-width: 1000px){ .cred-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 700px){ .cred-grid{ grid-template-columns: 1fr; } }
+
+  /* ——— Selected work / Certificates ——— */
+  .cert-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .cert-grid .cert-item{ display:grid; grid-template-columns: 70px 1fr; gap: 18px; padding: 22px 0; border-top: 1px solid var(--rule); }
+  .cert-grid .cert-item .yr{ font-family: var(--mono); font-size: 12px; color: var(--mocha); padding-top: 4px; letter-spacing: 0.1em; }
+  .cert-grid .cert-item .title{ font-size: 15px; line-height: 1.45; color: var(--ink); }
+  .cert-grid .cert-item .meta{ font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+  @media (max-width: 760px){ .cert-grid{ grid-template-columns: 1fr; } }
+
+  /* ——— Appointment / Clinics ——— */
+  .clinics{ background: var(--ink); color: var(--cream); }
+  .clinics .secthead .num{ color: rgba(246,237,224,0.6); }
+  .clinics .secthead h2{ color: var(--cream); }
+  .clinics .secthead h2 em{ color: var(--tan); }
+  .clinic-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .clinic{ position: relative; border: 1px solid rgba(246,237,224,0.14); border-radius: 22px; padding: 36px 32px; overflow:hidden; transition: background .25s ease, transform .25s ease; }
+  .clinic::before{ content:""; position: absolute; inset:0; background: radial-gradient(ellipse at top left, rgba(200,168,136,0.16), transparent 60%); pointer-events:none; opacity: 0; transition: opacity .3s ease; }
+  .clinic:hover::before{ opacity: 1; }
+  .clinic .tag{ font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; color: var(--tan); text-transform: uppercase; margin-bottom: 18px; display:flex; justify-content:space-between; align-items:center; }
+  .clinic .tag .pin{ width: 8px; height:8px; border-radius:50%; background: #6bdf94; box-shadow: 0 0 0 4px rgba(107,223,148,0.15); }
+  .clinic h3{ margin: 0 0 6px; font-family: var(--serif); font-weight: 500; font-size: 34px; line-height: 1.05; letter-spacing: -0.01em; }
+  .clinic .area{ font-size: 14px; color: rgba(246,237,224,0.7); margin-bottom: 28px; }
+  .clinic .row{ display:flex; align-items:center; gap: 12px; font-family: var(--mono); font-size: 13px; color: var(--cream); padding: 12px 0; border-top: 1px solid rgba(246,237,224,0.12); }
+  .clinic .row .ico{ width: 16px; height:16px; color: var(--tan); flex-shrink: 0; }
+  .clinic .row .ico svg{ width: 100%; height: 100%; }
+  .clinic .cta{ margin-top: 26px; display:inline-flex; align-items:center; gap: 10px; background: var(--cream); color: var(--ink); border: 0; padding: 14px 22px; border-radius: 999px; font-size: 14px; cursor: pointer; font-family: var(--sans); transition: background .2s ease; width:auto; }
+  .clinic .cta:hover{ background: var(--tan); }
+  .clinic .cta svg{ width: 16px; height: 16px; }
+  @media (max-width: 800px){ .clinic-grid{ grid-template-columns: 1fr; } }
+
+  .clinics .note{ margin-top: 36px; display:flex; gap: 14px; align-items: center; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(246,237,224,0.55); }
+  .clinics .note::before{ content:""; flex:1; height:1px; background: rgba(246,237,224,0.18); }
+  .clinics .note::after{ content:""; flex:1; height:1px; background: rgba(246,237,224,0.18); }
+
+  /* ——— Footer ——— */
+  footer{ padding: 44px 0; background: var(--cream-2); border-top: 1px solid var(--rule); }
+  footer .row{ display:flex; justify-content:space-between; align-items:center; gap: 24px; flex-wrap: wrap; }
+  footer .row .copy{ font-family: var(--mono); font-size: 11.5px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+  footer .row .links{ display:flex; gap: 22px; font-size: 13.5px; color: var(--mocha); }
+  footer .row .links a:hover{ color: var(--ink); }
+
+  /* ——— Modal ——— */
+  .modal-backdrop{ position: fixed; inset: 0; background: rgba(43,35,27,0.42); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); z-index: 100; display:none; align-items:center; justify-content:center; padding: 24px; opacity: 0; transition: opacity .2s ease; }
+  .modal-backdrop.open{ display:flex; opacity: 1; }
+  .modal{ background: var(--cream); border-radius: 22px; max-width: 520px; width: 100%; padding: 36px 32px 28px; border: 1px solid var(--rule); box-shadow: 0 30px 80px -30px rgba(43,35,27,0.45); transform: translateY(8px); transition: transform .25s ease; }
+  .modal-backdrop.open .modal{ transform: translateY(0); }
+  .modal .modal-head{ display:flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+  .modal .modal-head .eyebrow{ display:block; }
+  .modal .modal-head button{ background: transparent; border: 0; color: var(--mocha); cursor: pointer; padding: 6px; border-radius: 8px; transition: background .2s ease; }
+  .modal .modal-head button:hover{ background: var(--nude); }
+  .modal h3{ margin: 8px 0 6px; font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.1; }
+  .modal h3 em{ color: var(--mocha); font-style: italic; }
+  .modal p.help{ margin: 0 0 22px; font-size: 14px; color: var(--mocha); }
+  .modal .options{ display:flex; flex-direction:column; gap: 12px; }
+  .modal .option{ display:flex; align-items:center; gap: 16px; padding: 18px; border-radius: 14px; background: var(--cream-2); border: 1px solid var(--rule); cursor: pointer; transition: background .2s ease, transform .15s ease, border-color .2s ease; text-decoration:none; color: var(--ink); font-family: var(--sans); }
+  .modal .option:hover{ background: var(--nude); border-color: var(--tan); }
+  .modal .option .ic{ width: 42px; height:42px; border-radius: 50%; background: var(--ink); color: var(--cream); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .modal .option .ic svg{ width: 18px; height:18px; }
+  .modal .option .meta{ flex:1; min-width: 0; }
+  .modal .option .meta .ttl{ font-family: var(--serif); font-size: 19px; line-height: 1.15; }
+  .modal .option .meta .sub{ font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--muted); margin-top: 4px; }
+  .modal .option .arrow{ color: var(--mocha); }
+  .modal .footnote{ margin-top: 20px; font-size: 11.5px; color: var(--muted); text-align: center; line-height: 1.5; }
+
+  /* ——— Reveal on scroll ——— */
+  .reveal{ opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<header class="topbar">
+  <div class="wrap inner">
+    <a class="brand" href="#top"><span class="dot"></span>Davita Dwirissa</a>
+    <nav class="primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#appointment">Clinics</a>
+    </nav>
+    <button class="topcta" data-open-modal>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      Book Appointment
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap">
+    <div class="marker tl">
+      <span>Est. 2019</span>
+      <span style="margin-top:4px;">Jakarta · Indonesia</span>
+    </div>
+
+    <div class="grid">
+      <div class="lead">
+        <div class="eyebrow">General Dentist · STR Aktif</div>
+        <h1 class="reveal in">
+          drg. Davita
+          <span class="second">Dwirissa</span>
+        </h1>
+        <p class="summary reveal in" style="transition-delay:.1s;">
+          Personable dentist with six years of clinical experience improving oral health
+          and rebuilding confidence — from coastal Anambas to South Jakarta. Calm chairside,
+          evidence-based, and especially patient with children and elderly visitors.
+        </p>
+        <div class="actions reveal in" style="transition-delay:.2s;">
+          <button class="btn-primary" data-open-modal>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Book an Appointment
+          </button>
+          <a class="btn-ghost" href="assets/CV-Davita-Dwirissa-2026.pdf" target="_blank" rel="noopener">
+            Download CV
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="portrait reveal in" style="transition-delay:.15s;">
+        <div class="frame">
+          <img src="assets/davita.jpg" alt="Portrait of Dr. Davita Dwirissa" />
+        </div>
+        <div class="meta">
+          Practitioner ·
+          <strong>General Dentistry</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="track">
+        <div class="item">Restorative Dentistry</div>
+        <div class="item">Endodontics</div>
+        <div class="item">Pediatric Care</div>
+        <div class="item">Preventive Oral Health</div>
+        <div class="item">Root Canal Therapy</div>
+        <div class="item">Patient Education</div>
+        <div class="item">Restorative Dentistry</div>
+        <div class="item">Endodontics</div>
+        <div class="item">Pediatric Care</div>
+        <div class="item">Preventive Oral Health</div>
+        <div class="item">Root Canal Therapy</div>
+        <div class="item">Patient Education</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="secthead">
+      <div class="num">01 — Profile</div>
+      <h2>A calm chairside, <em>built on six years of practice.</em></h2>
+    </div>
+
+    <div class="about-grid">
+      <p class="lede">
+        I treat dentistry as <em>a relationship</em>, not a transaction —
+        diagnosing carefully, explaining clearly, and pacing every visit
+        so my patients leave feeling lighter than they came in.
+      </p>
+      <p>
+        I trained at Trisakti University (Bachelor of Dentistry, 2016;
+        Doctor of Medicine in Dentistry, 2019) and have since practiced
+        across hospitals and private clinics from the Anambas and Batam
+        Islands to Pondok Indah and Condet, Jakarta. My day-to-day spans
+        examinations and pain management, restorative work, supervised
+        root canal therapy, and patient education — with a particular care
+        for children and elderly visitors who need a gentler pace.
+      </p>
+      <div class="factstack">
+        <div class="fact">
+          <div class="k">Specialty</div>
+          <div class="v">General Dentistry</div>
+        </div>
+        <div class="fact">
+          <div class="k">Experience</div>
+          <div class="v">6+ Years</div>
+        </div>
+        <div class="fact">
+          <div class="k">Based in</div>
+          <div class="v">Jakarta, Indonesia</div>
+        </div>
+        <div class="fact">
+          <div class="k">Languages</div>
+          <div class="v">Bahasa · English</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="secthead">
+      <div class="num">02 — Practice</div>
+      <h2>Where I've <em>worked.</em></h2>
+    </div>
+
+    <div class="exp-list">
+      <article class="exp-row">
+        <div class="yr">2022 — 2026</div>
+        <div>
+          <h3>RS HJ Bunda Halimah</h3>
+          <div class="role">General Dentist</div>
+          <div class="loc">Batam City, Riau Islands</div>
+        </div>
+        <ul>
+          <li>Evaluated teeth to diagnose conditions and refer for specialist care.</li>
+          <li>Educated patients on proper oral hygiene to promote prevention.</li>
+        </ul>
+        <div class="idx">N° 01</div>
+      </article>
+
+      <article class="exp-row">
+        <div class="yr">2022 — 2026</div>
+        <div>
+          <h3>Lanera Dental Care</h3>
+          <div class="role">General Dentist</div>
+          <div class="loc">Batam City, Riau Islands</div>
+        </div>
+        <ul>
+          <li>Supervised dental hygienists, assistants, and admin staff for high-quality service.</li>
+          <li>Completed root canal treatments with supervised pain management.</li>
+          <li>Guided patients on oral hygiene to develop long-term oral health.</li>
+        </ul>
+        <div class="idx">N° 02</div>
+      </article>
+
+      <article class="exp-row">
+        <div class="yr">2022 — 2025</div>
+        <div>
+          <h3>Jira Dental Care</h3>
+          <div class="role">General Dentist</div>
+          <div class="loc">Batam Islands, Riau Islands</div>
+        </div>
+        <ul>
+          <li>Conducted standardized dental treatment and triage.</li>
+          <li>Evaluated and referred specialist cases.</li>
+        </ul>
+        <div class="idx">N° 03</div>
+      </article>
+
+      <article class="exp-row">
+        <div class="yr">2021 — 2022</div>
+        <div>
+          <h3>RSUD Palmatak · RSUD Tarempa</h3>
+          <div class="role">General Dentist</div>
+          <div class="loc">Anambas Islands Regency, Riau Islands</div>
+        </div>
+        <ul>
+          <li>Delivered oral health care and disease prevention to remote communities.</li>
+          <li>Followed up post-procedure for proper pain management.</li>
+          <li>Supervised dental staff to maintain quality of service.</li>
+        </ul>
+        <div class="idx">N° 04</div>
+      </article>
+
+      <article class="exp-row">
+        <div class="yr">2019 — 2021</div>
+        <div>
+          <h3>Dental Corner Pondok Indah</h3>
+          <div class="role">General Dentist</div>
+          <div class="loc">South Jakarta, DKI Jakarta</div>
+        </div>
+        <ul>
+          <li>Assessed teeth to determine treatment plans and specialist referrals.</li>
+          <li>Performed advanced modern dentistry to keep skills current.</li>
+          <li>Conferred with patients on treatment plans and procedures.</li>
+        </ul>
+        <div class="idx">N° 05</div>
+      </article>
+
+      <article class="exp-row">
+        <div class="yr">2019 — 2021</div>
+        <div>
+          <h3>Your Smile Dental Care</h3>
+          <div class="role">General Dentist</div>
+          <div class="loc">South Jakarta, DKI Jakarta</div>
+        </div>
+        <ul>
+          <li>Maintained up-to-date skills through regular modern-dentistry practice.</li>
+          <li>Completed root canal treatments with supervised pain management.</li>
+        </ul>
+        <div class="idx">N° 06</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Credentials grid -->
+<section class="block" id="credentials">
+  <div class="wrap">
+    <div class="secthead">
+      <div class="num">03 — Credentials</div>
+      <h2>Training, <em>qualifications & continuous learning.</em></h2>
+    </div>
+
+    <div class="cred-grid">
+      <article class="card">
+        <div class="label">Education <span class="glyph">E</span></div>
+        <ul>
+          <li>
+            Doctor of Medicine in Dentistry
+            <span class="yr">Trisakti University · 2019</span>
+          </li>
+          <li>
+            Bachelor of Dentistry
+            <span class="yr">Trisakti University · 2016</span>
+          </li>
+          <li>
+            SMA Lazuardi GIS
+            <span class="yr">High School · 2012</span>
+          </li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="label">Qualifications <span class="glyph">Q</span></div>
+        <ul>
+          <li>Patient examinations and pain management.</li>
+          <li>Communication across all levels, including children and elderly.</li>
+          <li>Adaptable in both team and independent practice.</li>
+          <li>Composed under pressure and long working hours.</li>
+          <li>Experienced supervising and leading clinical teams.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="label">Languages <span class="glyph">L</span></div>
+        <ul>
+          <li>Bahasa Indonesia <span class="yr">Native</span></li>
+          <li>English <span class="yr">Professional</span></li>
+        </ul>
+        <div class="label" style="margin-top:24px;">Publication <span class="glyph">P</span></div>
+        <p class="body" style="margin-top:0;"><em>"Perbedaan Pengaruh Obat Kumur Chlorine Dioxide dan Tanpa Chlorine Dioxide Terhadap pH Saliva Anak Usia 10–12 Tahun."</em></p>
+        <div style="font-family:var(--mono); font-size:11px; color:var(--muted); letter-spacing:0.1em; margin-top:6px;">Seminar Nasional Cendekiawan Ke-2 · Trisakti University · 2016</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Certificates -->
+<section class="block" id="certificates">
+  <div class="wrap">
+    <div class="secthead">
+      <div class="num">04 — Continuing Education</div>
+      <h2>Selected courses & <em>certifications.</em></h2>
+    </div>
+
+    <div class="cert-grid">
+      <div class="cert-item">
+        <div class="yr">2025</div>
+        <div>
+          <div class="title">Basic Comprehensive Orthodontic Course — "Advancing Orthodontics with TADs"</div>
+          <div class="meta">Dental City Malaya</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="yr">2024</div>
+        <div>
+          <div class="title">Kepri Simple Endodontic Learning Private Class</div>
+          <div class="meta">Participant</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="yr">2023</div>
+        <div>
+          <div class="title">Hands On — "Simple Fixation Technique for Tooth Replantations"</div>
+          <div class="meta">SKKGB XI PDGI Bekasi</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="yr">2023</div>
+        <div>
+          <div class="title">Hands On — "How to Achieve a Predictable Class II Restoration"</div>
+          <div class="meta">SKKGB XI PDGI Bekasi</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="yr">2022</div>
+        <div>
+          <div class="title">Workshop &amp; Hands On — "Reinforcement of Basic Knowledge for Daily Dental Practice"</div>
+          <div class="meta">MUSCAB PDGI</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="yr">2022</div>
+        <div>
+          <div class="title">Moderator — BKGN Webinar: "Peduli Kesehatan Gigi Sejak Dini"</div>
+          <div class="meta">Anambas Islands</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="yr">2020</div>
+        <div>
+          <div class="title">Odontectomy Course</div>
+          <div class="meta">Hendra Hidayat Implant Centre</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="yr">2019</div>
+        <div>
+          <div class="title">3M Cobra Learning Centre Workshop — Upgrading Your Skills</div>
+          <div class="meta">PDGI South Jakarta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment -->
+<section class="block clinics" id="appointment">
+  <div class="wrap">
+    <div class="secthead">
+      <div class="num">05 — Appointment</div>
+      <h2>Practicing today at <em>two clinics.</em></h2>
+    </div>
+
+    <div class="clinic-grid">
+      <article class="clinic">
+        <div class="tag">
+          <span>Setiabudi · Jakarta</span>
+          <span class="pin" title="Accepting bookings"></span>
+        </div>
+        <h3>Klinik Gigi Malabar 21</h3>
+        <div class="area">General &amp; Restorative Dentistry</div>
+        <div class="row">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.94.34 1.86.66 2.74a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6 6l1.34-1.34a2 2 0 0 1 2.11-.45c.88.32 1.8.54 2.74.66A2 2 0 0 1 22 16.92z"/></svg></span>
+          +62 819-1888-2121
+        </div>
+        <div class="row">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          Setiabudi, South Jakarta
+        </div>
+        <button class="cta" data-wa="6281918882121" data-clinic="Klinik Gigi Malabar 21, Setiabudi">
+          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.917 2.722.917.817 0 2.15-.715 2.49-1.49.143-.32.286-.645.286-1.005 0-.5-2.005-1.49-2.535-1.49zm-2.952 4.41a8.504 8.504 0 0 1-4.51-1.299l-3.236.842.86-3.177a8.481 8.481 0 0 1-1.43-4.726c0-4.7 3.829-8.527 8.528-8.527 4.7 0 8.527 3.827 8.527 8.527s-3.828 8.36-8.527 8.36zm0-18.55C10.5 3.066 5.55 8.02 5.55 14.05c0 1.83.448 3.578 1.298 5.146L5 25.146l6.097-1.674c1.494.825 3.265 1.296 5.062 1.296 6.03 0 11.06-4.953 11.06-10.983S22.18 3.066 16.158 3.066z"/></svg>
+          Message on WhatsApp
+        </button>
+      </article>
+
+      <article class="clinic">
+        <div class="tag">
+          <span>Condet · Jakarta</span>
+          <span class="pin" title="Accepting bookings"></span>
+        </div>
+        <h3>Ocean Dental Condet</h3>
+        <div class="area">General &amp; Restorative Dentistry</div>
+        <div class="row">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.94.34 1.86.66 2.74a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6 6l1.34-1.34a2 2 0 0 1 2.11-.45c.88.32 1.8.54 2.74.66A2 2 0 0 1 22 16.92z"/></svg></span>
+          +62 821-9913-5545
+        </div>
+        <div class="row">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          Condet, East Jakarta
+        </div>
+        <button class="cta" data-wa="6282199135545" data-clinic="Ocean Dental Condet">
+          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.917 2.722.917.817 0 2.15-.715 2.49-1.49.143-.32.286-.645.286-1.005 0-.5-2.005-1.49-2.535-1.49zm-2.952 4.41a8.504 8.504 0 0 1-4.51-1.299l-3.236.842.86-3.177a8.481 8.481 0 0 1-1.43-4.726c0-4.7 3.829-8.527 8.528-8.527 4.7 0 8.527 3.827 8.527 8.527s-3.828 8.36-8.527 8.36zm0-18.55C10.5 3.066 5.55 8.02 5.55 14.05c0 1.83.448 3.578 1.298 5.146L5 25.146l6.097-1.674c1.494.825 3.265 1.296 5.062 1.296 6.03 0 11.06-4.953 11.06-10.983S22.18 3.066 16.158 3.066z"/></svg>
+          Message on WhatsApp
+        </button>
+      </article>
+    </div>
+
+    <div class="note">Bookings open via WhatsApp — typical reply within the same day</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div class="copy">© 2026 · drg. Davita Dwirissa · General Dentist</div>
+    <div class="links">
+      <a href="mailto:dwirissadavita@gmail.com">dwirissadavita@gmail.com</a>
+      <span style="color:var(--rule)">·</span>
+      <a href="tel:+62811692274">+62 811 692 274</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal-backdrop" id="apptModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal" role="document">
+    <div class="modal-head">
+      <span class="eyebrow">Choose a clinic</span>
+      <button aria-label="Close" data-close-modal>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <h3 id="modalTitle">Where would you like <em>to be seen?</em></h3>
+    <p class="help">Pick a clinic — we'll open WhatsApp with a short message you can edit before sending.</p>
+    <div class="options">
+      <a class="option" href="#" data-wa="6281918882121" data-clinic="Klinik Gigi Malabar 21, Setiabudi">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <div class="meta">
+          <div class="ttl">Klinik Gigi Malabar 21</div>
+          <div class="sub">Setiabudi · +62 819-1888-2121</div>
+        </div>
+        <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="option" href="#" data-wa="6282199135545" data-clinic="Ocean Dental Condet">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <div class="meta">
+          <div class="ttl">Ocean Dental Condet</div>
+          <div class="sub">Condet · +62 821-9913-5545</div>
+        </div>
+        <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+    </div>
+    <div class="footnote">Tapping a clinic opens WhatsApp in a new tab.</div>
+  </div>
+</div>
+
+<script>
+  // —— Modal ——
+  const modal = document.getElementById('apptModal');
+  function openModal(){ modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal(){ modal.classList.remove('open'); document.body.style.overflow = ''; }
+  document.querySelectorAll('[data-open-modal]').forEach(el => el.addEventListener('click', e => { e.preventDefault(); openModal(); }));
+  document.querySelectorAll('[data-close-modal]').forEach(el => el.addEventListener('click', closeModal));
+  modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+  // —— WhatsApp deep-link builder ——
+  function buildWA(number, clinic){
+    const msg = `Halo drg. Davita, saya ingin membuat janji konsultasi di ${clinic}. Apakah ada jadwal yang tersedia?`;
+    return `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
+  }
+  document.querySelectorAll('[data-wa]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      const number = el.getAttribute('data-wa');
+      const clinic = el.getAttribute('data-clinic');
+      window.open(buildWA(number, clinic), '_blank', 'noopener');
+      closeModal();
+    });
+  });
+
+  // —— Reveal on scroll ——
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -60px 0px', threshold: 0.05 });
+  document.querySelectorAll('.secthead, .about-grid, .exp-row, .card, .cert-item, .clinic, .ticker').forEach(el => {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
