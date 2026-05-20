@@ -684,7 +684,7 @@
 
   // —— WhatsApp deep-link builder ——
   function buildWA(number, clinic){
-    const msg = `Halo drg. Davita, saya ingin membuat janji konsultasi di ${clinic}. Apakah ada jadwal yang tersedia?`;
+    const msg = `Halo ${clinic}, saya ingin membuat janji konsultasi dengan drg. Davita. Apakah ada jadwal yang tersedia?`;
     return `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
   }
   document.querySelectorAll('[data-wa]').forEach(el => {
